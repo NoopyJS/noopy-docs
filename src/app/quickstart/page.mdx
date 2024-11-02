@@ -1,0 +1,109 @@
+import {Button, CodeGroup, Note} from "../../components/mdx";
+import {Code} from "../../components/Code";
+export const metadata = {
+  title: 'Quickstart',
+  description:
+    'This guide will get you all set up and ready to use Noopy. We’ll cover how to get started an API client and how to make your first API request.',
+}
+
+# Noopy Quickstart Guide
+
+Welcome to Noopy! This guide will take you through the steps to set up and launch a foundational project with the Noopy framework, featuring built-in support for **authentication**, **Swagger documentation**, **caching**, **decorators**, a robust **CLI**, and **ORM** capabilities.
+## Prerequisites
+
+Before getting started, make sure you have the following installed:
+
+- **Node.js** (version 12 or higher)
+- **npm** (version 6 or higher) or **yarn**
+
+## Installation
+
+[//]: # (<Note>)
+
+[//]: # (  Before you can make requests to the Protocol API, you will need to grab your)
+
+[//]: # (  API key from your dashboard. You find it under [Settings &raquo; API]&#40;#&#41;.)
+
+[//]: # (</Note>)
+
+To install the Noopy CLI globally, use the following command:
+
+<CodeGroup title={""}>
+
+```bash {{ language: 'js' }}
+npm install -g noopy
+```
+
+</CodeGroup>
+
+<div className="not-prose">
+  <Button href="/sdks" variant="text" arrow="right">
+      <>Explore all available Noopy commands</>
+  </Button>
+</div>
+
+## Create a New Noopy Project
+
+You can quickly generate a new Noopy project using the CLI command below:
+
+<CodeGroup title={""}>
+```bash
+noopy new my-noopy-app
+cd my-noopy-app
+```
+</CodeGroup>
+
+## Project Structure Overview
+
+After running the `noopy new` command, your new project will have the following directory structure:
+
+<CodeGroup title={""} copyButtonVisible={false}>
+
+```bash
+my-noopy-app/
+├── src/
+│   ├── controllers/    # Define your route handlers here
+│   ├── services/       # Business logic and data services
+│   ├── config/         # Environment and configuration settings
+│   └── app.js          # Entry point for your application
+└── package.json        # Project dependencies and scripts
+```
+
+</CodeGroup>
+
+## Start the development server
+
+To launch the development server, run the following command:
+
+
+<CodeGroup title={""}>
+
+```bash
+noopy start ( -d | --dev )
+```
+
+</CodeGroup>
+
+This will start the server on the default port 3000, allowing you to begin testing and developing your Noopy application.
+
+[//]: # (<div className="not-prose">)
+
+[//]: # (  <Button href="/conversations" variant="text" arrow="right">)
+
+[//]: # (    <>Read the docs for the Conversations endpoint</>)
+
+[//]: # (  </Button>)
+
+[//]: # (</div>)
+
+[//]: # (## What's next?)
+
+[//]: # ()
+[//]: # (Great, you're now set up with an API client and have made your first request to the API. Here are a few links that might be handy as you venture further into the Protocol API:)
+
+[//]: # ()
+[//]: # (- [Grab your API key from the Protocol dashboard]&#40;#&#41;)
+
+[//]: # (- [Check out the Conversations endpoint]&#40;/conversations&#41;)
+
+[//]: # (- [Learn about the different error messages in Protocol]&#40;/errors&#41;)
