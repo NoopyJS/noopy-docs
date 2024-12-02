@@ -1,0 +1,84 @@
+import {CodeGroup} from "../../components/mdx";
+export const metadata = {
+  title: 'Decorators',
+  description:
+    'In this guide, we will look at how to create customs decorators to extend the functionality of your app.',
+}
+
+# Creating a Custom Decorator
+The commands below will generate a new file in the `src/decorators` folder.
+
+## Types of Decorators
+
+### Simple Decorator
+
+<CodeGroup title={""}>
+```bash
+noopy generate -d myDecorator
+```
+</CodeGroup>
+
+Generate a simple decorator that can be used on classes and methods:
+
+<CodeGroup title={""}>
+```javascript
+@myDecorator
+class MyClass {
+    @myDecorator
+    myMethod() {
+        // Your code
+    }
+}
+```
+</CodeGroup>
+
+### Decorators with parameters
+
+```bash
+noopy generate -d myDecorator --with-params
+```
+
+Generate a decorator with parameters that can be used on classes and methods:
+
+
+<CodeGroup title={""}>
+```javascript
+@myDecorator({ param1: 'value1', param2: 'value2' })
+class MyClass {
+    @myDecorator({ param1: 'value1', param2: 'value2' })
+    myMethod() {
+        // Your code
+    }
+}
+```
+</CodeGroup>
+
+
+## Good Practices
+
+1. **Naming** : Use a clear and descriptive name for your decorators.
+
+2. **Documentation** : Always document your decorators to explain their purpose and usage.
+
+3. **Typing** : Define interfaces for your decorator parameters to ensure type safety.
+
+4. **Error handling** : Add error handling to your decorators to catch and log any issues.
+
+## Troubleshooting
+
+### Common Issues
+
+1. **The decorator is not working**:
+- Verify that `experimentalDecorators` is enabled in your `tsconfig.json`
+- Ensure that the decorator is being correctly exported
+
+2. **TypeScript Errors**:
+- Check that you have the correct types imported
+- Ensure that your TypeScript version supports decorators
+
+### Support
+
+If you encounter any issues or have questions:
+- Open an issue on our GitHub
+- Refer to the full documentation
+- Join our Discord community

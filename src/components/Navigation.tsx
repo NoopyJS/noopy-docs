@@ -235,11 +235,11 @@ export const navigation: Array<NavGroup> = [
     links: [
       { title: 'Introduction', href: '/' },
       { title: 'Quickstart', href: '/quickstart' },
-      { title: 'SDKs', href: '/sdks' },
+      { title: 'Decorators', href: '/decorators' },
+      { title: 'Cache', href: '/cache' },
       { title: 'Authentication', href: '/authentication' },
-      { title: 'Pagination', href: '/pagination' },
+      // { title: 'Pagination', href: '/pagination' },
       { title: 'Errors', href: '/errors' },
-      { title: 'Webhooks', href: '/webhooks' },
     ],
   },
   {

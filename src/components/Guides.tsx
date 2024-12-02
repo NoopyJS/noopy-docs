@@ -3,6 +3,18 @@ import { Heading } from '@/components/Heading'
 
 const guides = [
   {
+    href: '/decorators',
+    name: 'Decorators',
+    description:
+        'Discover how to create custom decorators using our CLI to improve your methods or classes.',
+  },
+  {
+    href: '/cache',
+    name: 'Cache',
+    description:
+        'Learn how to cache your API requests to improve performance.',
+  },
+  {
     href: '/authentication',
     name: 'Authentication',
     description: 'Learn how to authenticate your API requests.',
@@ -17,13 +29,7 @@ const guides = [
     name: 'Errors',
     description:
       'Read about the different types of errors returned by the API.',
-  },
-  {
-    href: '/webhooks',
-    name: 'Webhooks',
-    description:
-      'Learn how to programmatically configure webhooks for your app.',
-  },
+  }
 ]
 
 export function Guides() {
