@@ -235,8 +235,10 @@ export const navigation: Array<NavGroup> = [
     links: [
       { title: 'Introduction', href: '/' },
       { title: 'Quickstart', href: '/quickstart' },
+      { title: 'Router', href: '/router' },
       { title: 'Decorators', href: '/decorators' },
       { title: 'Cache', href: '/cache' },
+      { title: 'Swagger', href: '/swagger' },
       { title: 'Authentication', href: '/authentication' },
       // { title: 'Pagination', href: '/pagination' },
       { title: 'Errors', href: '/errors' },
@@ -245,11 +247,11 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Resources',
     links: [
-      { title: 'Contacts', href: '/contacts' },
+      /*{ title: 'Contacts', href: '/contacts' },
       { title: 'Conversations', href: '/conversations' },
       { title: 'Messages', href: '/messages' },
       { title: 'Groups', href: '/groups' },
-      { title: 'Attachments', href: '/attachments' },
+      { title: 'Attachments', href: '/attachments' },*/
     ],
   },
 ]

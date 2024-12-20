@@ -1,0 +1,108 @@
+import {CodeGroup} from "../../components/mdx";
+import {Code} from "../../components/Code";
+export const metadata = {
+    title: 'Router',
+    description:
+        'How our router works and how to use it in your app.',
+}
+
+# Introduction
+
+The router system in Noopy enables modular and clear route management within an application. This documentation outlines the key concepts, implementation examples, and best practices for creating an efficient routing system.
+
+## Basic Routing
+If you want to use only the Noopy routing instead of the full framework, you can install the `noopy` package:
+
+<CodeGroup title={""}>
+```bash
+npm install @noopyjs/noopy
+```
+</CodeGroup>
+
+### Example:
+
+<CodeGroup title={""}>
+```javascript
+import Noopy from '@noopyjs/noopy';
+const noopy = new Noopy();
+
+// Route "GET", with the path "/"
+// You can access this resource at "http://localhost:3000/"
+// Other methods exists like "POST", "PUT", "DELETE", etc.
+noopy.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+noopy.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
+```
+</CodeGroup>
+
+
+
+## Enhanced Router
+A router in Noopy helps separate routes into reusable modules. Here’s an example for a user API system.
+
+### Example: User API
+
+Create a new file for user routes:
+<CodeGroup title={""}>
+```javascript
+// routes/user.js
+
+import { Router } from '@noopyjs/noopy';
+const router = new Router();
+
+// Route to fetch all users
+router.get('/', (req, res) => {
+    res.send('List of all users');
+});
+
+// Route to create a new user
+router.post('/', (req, res) => {
+    const { name, email } = req.body;
+    res.send(`User added: ${name}, ${email}`);
+});
+
+module.exports = router;
+    ```
+</CodeGroup>
+
+Integrate the user routes into your application:
+
+<CodeGroup title={""}>
+```javascript
+import userRoutes from './routes/user';
+
+app.use('/users', userRoutes);
+```
+</CodeGroup>
+
+## Best Practices
+
+1. **Organize your code into modules**: Use separate files for routes, middleware, and data models.
+2. **Handle errors globally**: Implement an error-handling middleware.
+3. **Use a .env file for sensitive configurations**:
+
+<CodeGroup title={""}>
+    ```bash
+    PORT=3000
+    DB_URL=mongodb://localhost:27017/mydb
+    ```
+</CodeGroup>
+Load them using the `dotenv` package:
+<CodeGroup title={""}>
+    ```javascript
+    require('dotenv').config();
+    const port = process.env.PORT || 3000;
+    ```
+</CodeGroup>
+
+
+### Support
+
+If you encounter any issues or have questions:
+- Open an issue on our GitHub
+- Refer to the full documentation
+- Join our Discord community

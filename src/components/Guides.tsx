@@ -15,6 +15,18 @@ const guides = [
         'Learn how to cache your API requests to improve performance.',
   },
   {
+    href: '/swagger',
+    name: 'Swagger',
+    description:
+        'Integration of Swagger to document your API.',
+  },
+  {
+    href: '/router',
+    name: 'Router',
+    description:
+        'Noopy provides a router to help you manage your routes.',
+  },
+  {
     href: '/authentication',
     name: 'Authentication',
     description: 'Learn how to authenticate your API requests.',

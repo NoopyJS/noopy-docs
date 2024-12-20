@@ -31,7 +31,7 @@ To install the Noopy CLI globally, use the following command:
 <CodeGroup title={""}>
 
 ```bash {{ language: 'js' }}
-npm install -g noopy
+npm install -g @noopyjs/noopy-cli
 ```
 
 </CodeGroup>
@@ -64,9 +64,11 @@ my-noopy-app/
 ├── src/
 │   ├── controllers/    # Define your route handlers here
 │   ├── services/       # Business logic and data services
+│   ├── models/         # Data models and database schema
 │   ├── config/         # Environment and configuration settings
-│   └── app.js          # Entry point for your application
+│   └── app.ts          # Entry point for your application
 └── package.json        # Project dependencies and scripts
+    ...
 ```
 
 </CodeGroup>
@@ -79,7 +81,7 @@ To launch the development server, run the following command:
 <CodeGroup title={""}>
 
 ```bash
-noopy start ( -d | --dev )
+noopy start
 ```
 
 </CodeGroup>

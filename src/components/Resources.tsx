@@ -27,7 +27,7 @@ interface Resource {
 }
 
 const resources: Array<Resource> = [
-  {
+  /*{
     href: '/contacts',
     name: 'Contacts',
     description:
@@ -79,7 +79,7 @@ const resources: Array<Resource> = [
       y: 22,
       squares: [[0, 1]],
     },
-  },
+  },*/
 ]
 
 function ResourceIcon({ icon: Icon }: { icon: Resource['icon'] }) {
